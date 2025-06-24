@@ -1,0 +1,98 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #dcdbdb;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+.calculator {
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    width: 300px;
+}
+
+.calculator-screen {
+    /* ... existing styles ... */
+
+    width: calc(100% - 20px); /* Keep this */
+    height: 60px;
+    background-color: #eee;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: right;
+    padding: 0 10px;
+    box-sizing: border-box;
+
+    /* Base font size (for shorter numbers, will be overridden by JS) */
+    font-size: 2.5em; /* This will be the largest font size */
+    overflow-x: hidden; /* Hide default scrollbar, as we're dynamically adjusting font */
+    white-space: nowrap; /* Keep text on one line */
+
+    /* Add a smooth transition for font-size changes */
+    transition: font-size 0.2s ease-in-out;
+}
+
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    background-color: #666;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.button:hover {
+    background-color: #888;
+}
+
+.operator {
+    background-color: #ff9500;
+}
+
+.operator:hover {
+    background-color: #cc7a00;
+}
+
+.clear {
+    background-color: #d9534f;
+}
+
+.clear:hover {
+    background-color: #b73e3a;
+}
+
+.decimal {
+    background-color: #666;
+}
+
+.equals {
+    background-color: #007bff;
+    grid-column: span 4; /* Spans all 4 columns */
+}
+
+.equals:hover {
+    background-color: #0056b3;
+}
+
+.milestone-memo {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    justify-self: center;
+    font-size: 10px;
+    color: #f0f0f0;
+}
