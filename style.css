@@ -81,7 +81,16 @@ button {
 
 .equals {
     background-color: #007bff;
-    grid-column: span 4; /* Spans all 4 columns */
+    grid-column: span 2; /* Spans all 4 columns */
+}
+
+.delete{
+    background-color: #d9534f;
+    grid-column: span 2;
+}
+
+.delete:hover{
+    background-color: #b73e3a;
 }
 
 .equals:hover {
